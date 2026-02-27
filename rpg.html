@@ -1,0 +1,110 @@
+<script>
+    let vida_boss = 1000;
+    let mana_Heroi = 300;
+    let mana_gasta = 0;
+    let vida_heroi = 250;
+    let action;
+
+    alert("O chefe surgiu: 1000hp")
+    
+    // ===== LOOP PRINCIPAL DE COMBATE =====
+    // Executa até 15 turnos ou até uma das condições de vitória ser atingida
+    // Verifica se o boss foi derrotado (vitória antecipada)
+    for (let turno = 1; turno <= 15; turno++){
+        if (vida_boss <=0) { 
+            alert("O boss foi derrotado!")
+            break;
+            }
+        // retorna 0,1, ou 2.soma para trazer 1,2 ou 3
+        // action = Math.floor(Math.random()  * 3) + 1
+
+        // entrada do usuario 
+        let menu = "Escolha sua ação: \n"
+                + "1. Ataque basico (75 dano)\n"
+                + "2. Skill (200 dano, custa 70 mana)\n"
+                + "3. Ultimate (500 dano, custa 100 mana)\n"
+                + "4. Fugir";
+        let escolha = prompt(menu); // faz as escolhas do menu de acordo com os casos da switch
+        let action = parseInt(escolha); // faz o caso escolhido ser um numero inteiro para o switch funcionar de acordo com o menu
+
+        // ===== SISTEMA DE AÇÕES DO HERÓI ===== 
+        // Executa a ação escolhida pelo jogador
+        switch(action){
+            
+            case 1:
+                // alert("Ataque basico. 20 dano")
+                vida_boss -= 75;
+                if(Math.random() < 0.1){
+                    alert("Ataque crítico! Você causou 150 de dano!")
+                    vida_boss -= 75; // dano adicional para o ataque crítico
+                }
+                break;
+            
+            case 2:
+                if (mana_Heroi >= 70){
+                    // alert("Skill. 200 dano")
+                    vida_boss -= 200;
+                    mana_Heroi -= 70;
+                    mana_gasta += 70;
+                } else {
+                        alert("Mana Insuficiente!")
+                    }
+                break;
+            
+            case 3:
+                if(mana_gasta >= 100){
+                    // alert("Ultimate. 500 dano")
+                    vida_boss -= 500;
+                    mana_gasta = 0;
+                } else {
+                        alert("Ultimate não carregada!")
+                    }
+                break;
+            case 4:
+                alert("Você fugiu do combate!")
+                turno = 15; // para sair do loop
+                break ;
+            
+            default:
+                alert("Opção inválida! Tente novamente.")
+                
+        }
+
+        // ===== CONTRA-ATAQUE DO BOSS =====
+        // Se o boss ainda está vivo, ele tem 20% de chance de atacar o herói
+        if (vida_boss > 0 )
+        {
+            if(Math.random() < 0.2){
+                alert("O boss atacou! Você perdeu 50 HP")
+                vida_heroi -= 50;
+                if(Math.random() < 0.1){
+                    alert("O boss acertou um ataque crítico! Você perdeu 100 HP")
+                    vida_heroi -= 100; // dano adicional para o ataque crítico
+                }
+            } else {
+                alert("O boss errou um ataque! ")
+            }
+        }
+        
+        // ===== REGENERAÇÃO DE MANA =====
+        // O herói regenera 5 de mana a cada turno para equilibrar o consumo das skills
+        mana_Heroi +=5;
+        
+        // ===== EXIBIÇÃO DO STATUS ATUAL =====
+        // Mostra a vida do boss, mana do herói e vida do herói após este turno
+        alert("HP Boss: " + vida_boss + "\nMana: " + mana_Heroi + "\nHP Heroi: " + vida_heroi);
+    }
+
+    // ===== CONDIÇÃO DE TÉRMINO DO JOGO =====
+    // Verifica o resultado final e exibe a mensagem apropriada
+    if(vida_boss <= 0) 
+        {
+            alert("Boss derrotado, parabéns seu merda");
+        }
+    else 
+        {
+        // Se chegou aqui com o boss ainda vivo, o herói não conseguiu vencer
+        alert("O boss continua vivo, seu merda²");
+        }
+
+</script>
