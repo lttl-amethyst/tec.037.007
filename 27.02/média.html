@@ -1,0 +1,25 @@
+<script>
+
+     function calcular_media (nota1, nota2, nota3) {
+          let media = (nota1 + nota2 + nota3)/3;
+          let situacao_aprovaçao;
+          if (media < 7) {
+               situacao_aprovaçao = "reprovado. média: " + media ;
+          } else {
+               situacao_aprovaçao = "aprovado. média: " + media;
+          }
+          return situacao_aprovaçao;
+     }
+
+     let msg = "digite a primeira nota";
+     let nota1 = parseFloat(prompt(msg));
+
+     msg = "digite a segunda nota";
+     let nota2 = parseFloat(prompt(msg));
+
+     msg = "digite a terceira nota";
+     let nota3 = parseFloat(prompt(msg));
+
+     alert(calcular_media(nota1, nota2, nota3));
+
+</script>
