@@ -1,0 +1,13 @@
+<script>
+    function gerar_email(nome, sobrenome) {
+        const dominio = "@senai.br";
+        let email = nome.toLowerCase() + "." +  sobrenome.toLowerCase() + dominio;
+        return email;
+    }
+    let msg = "Digite seu nome:";
+    let nome = prompt(msg);
+    msg = "Digite seu sobrenome:";
+    let sobrenome = prompt(msg);
+    let email_gerado = gerar_email(nome, sobrenome);
+    alert(email_gerado);
+</script>
