@@ -18,5 +18,7 @@ demoQuery.style.border = '1px solid yellow';
 const demoQueryAll= document.querySelectorAll('.demo-query-all');
 demoQueryAll.forEach(caixa => {
     caixa.style.border = '1px solid red';
+     caixa.style.backgroundColor = 'MediumSpringGreen'
     caixa.style.color = 'gray';
+    caixa.style.fontFamily = 'glbOpenSans'
 })
