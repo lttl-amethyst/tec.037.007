@@ -1,32 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    </head>
-    <body style="background-color: black;">
-        <div class="container">
-            <div class="row">
-                <div class="col text-end" id="heroi">
-                    <div id="nome-heroi" style="color: white;">Aragon</div>⚔️<br>
-                    <progress id="hp-heroi" value="100" max="100" style="accent-color: red;"></progress><br>
-                    <progress id="mp-heroi" value="100" max="100";"></progress><br>
-                    <progress id="en-heroi" value="0" max="100" style="accent-color: rgb(25, 224, 25);"></progress><br>
-                    <img src="assets/output-onlinegiftools.gif" width="200" height="200">
+</head>
+
+<body style="background-color: black;">
+
+    <div class="container" style="background-color: black;">
+        <div class="card text-center" style="background-color: rgb(26, 53, 10);">
+
+            <div class="card-header" style="background-color: black; color: white;">joguinho da lolo</div>
+
+            <div class="card-body" id="tela" style="background-image: url(assets/bomb.jpg); background-size: cover;">
+
+                <p class="card-text" style="color: white; -webkit-text-stroke: 1px rgba(77, 111, 56, 0.321);">Turno 1
+                </p>
+
+                <div class="row">
+                    <div class="col text-middle" id="heroi">
+
+                        <ul class="list-group float-end" style="width: 225px;">
+                            <li id="nome-heroi" class="list-group-item"
+                                style="background-color: rgba(85, 111, 56, 0.321); color: white;">Finn</li>
+                            <li id="titulo-heroi" class="list-group-item"
+                                style="background-color: rgba(77, 111, 56, 0.321);">⚔️</li>
+                            <li id="hp-heroi" class="list-group-item"
+                                style="background-color: rgba(77, 119, 31, 0.321);">❤️
+                                <progress id="hp-heroi" value="100" max="100" style="accent-color: red;"></progress>
+                            </li>
+                            <li id="mp-heroi" class="list-group-item"
+                                style="background-color: rgba(77, 119, 31, 0.321);">💙
+                                <progress id="mp-heroi" value="100" max="100"></progress>
+                            </li>
+                            <li id="en-heroi" class="list-group-item"
+                                style="background-color: rgba(77, 119, 31, 0.321);">💥
+                                <progress id="en-heroi" value="0" max="100"
+                                    style="accent-color: rgb(25, 224, 25);"></progress>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col" id="boss">
+
+                        <ul class="list-group float-start" style="width: 225px;">
+                            <li id="nome-boss" class="list-group-item"
+                                style="background-color: rgba(77, 111, 56, 0.321); color: white;">Lich</li>
+                            <li id="titulo-boss" class="list-group-item"
+                                style="background-color: rgba(77, 119, 31, 0.321);">💀</li>
+                            <li id="hp-boss" class="list-group-item"
+                                style="background-color: rgba(77, 111, 56, 0.321);">❤️
+                                <progress id="hp-boss" value="100" max="100" style="accent-color: red;"></progress>
+                            </li>
+                            <li id="en-boss" class="list-group-item"
+                                style="background-color: rgba(77, 111, 56, 0.321);">💥
+                                <progress id="en-heroi" value="0" max="100"
+                                    style="accent-color: rgb(25, 224, 25);"></progress>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
-                <div class="col" id="boss">
+
+                <div class="row">
+                    <div class="col text-center" id="botões"> 
+                        <div><img src="assets/finn.gif" width="400" height="400"></div>
+                        <div class="btn-group" id="controles">
+                            <button class="btn-dark">ATTACK</button>
+                            <button class="btn-dark">SKILL</button>
+                            <button class="btn-dark">ULTIMATE</button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col text-start" id="msg">
+                        <img src="assets/lich.png" width="500" height="400">
+                    </div>
+
 
                 </div>
             </div>
-            <div class="row">
-                <div class="col" id="botões">
 
-                </div>
-                <div class="col" id="msg">
+            <div class="card-footer" style="background-color:rgb(26, 53, 10)"></div>
 
-                </div>
+        </div> <!-- card -->
+    </div> <!-- container -->
 
-            </div>
-        </div>
-    </body>
+</body>
+
 </html>
