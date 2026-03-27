@@ -15,17 +15,18 @@
 
             <div class="card-body" id="tela" style="background-image: url(assets/bomb.jpg); background-size: cover;">
 
-                <p class="card-text" style="color: white; -webkit-text-stroke: 1px rgba(77, 111, 56, 0.321);">Turno 1
-                </p>
+                <p class="card-text" style="color: white; -webkit-text-stroke: 1px rgba(77, 111, 56, 0.321);">Turno 1</p>
 
                 <div class="row">
-                    <div class="col text-middle" id="heroi">
+                    <div class="col text-middle" id="col-heroi">
 
                         <ul class="list-group float-start" style="width: 225px;">
                             <li id="nome-heroi" class="list-group-item"
-                                style="background-color: rgba(85, 111, 56, 0); color: white;"></li>
+                                style="background-color: rgba(85, 111, 56, 0); color: white;">
+                            </li>
                             <li id="titulo-heroi" class="list-group-item"
-                                style="background-color: rgba(77, 111, 56, 0); color: white;"></li>
+                                style="background-color: rgba(77, 111, 56, 0); color: white;">
+                            </li>
                             <li id="vida-heroi" class="list-group-item"
                                 style="background-color: rgba(77, 119, 31, 0);">❤️
                                 <progress id="hp-heroi" value="100" max="100" style="accent-color: red;"></progress>
@@ -43,13 +44,15 @@
 
                     </div>
 
-                    <div class="col" id="boss">
+                    <div class="col" id="col-boss">
 
                         <ul class="list-group float-end" style="width: 225px;">
                             <li id="nome-boss" class="list-group-item"
-                                style="background-color: rgba(77, 111, 56, 0); color: rgb(255, 255, 255);"></li>
+                                style="background-color: rgba(77, 111, 56, 0); color: rgb(255, 255, 255);">
+                            </li>
                             <li id="titulo-boss" class="list-group-item"
-                                style="background-color: rgba(77, 119, 31, 0); color: white;"></li>
+                                style="background-color: rgba(77, 119, 31, 0); color: white;">
+                            </li>
                             <li id="vida-boss" class="list-group-item"
                                 style="background-color: rgba(77, 111, 56, 0);">❤️
                                 <progress id="hp-boss" value="100" max="100" style="accent-color: red;"></progress>
@@ -65,16 +68,16 @@
                 </div>
 
                 <div class="row">
-                    <div class="col text-center" id="botoes"> 
-                        <div><img src="assets/finn.gif" width="400" height="400"></div>
+                    <div class="col text-center" id="col-botoes"> 
+                        <div>
+                            <img src="assets/finn.gif" width="400" height="400">
+                        </div>
                         <div class="btn-group" id="controles">
                             
                         </div>
                     </div>
 
-
-
-                    <div class="col text-start" id="msg">
+                    <div class="col text-start" id="col-msg">
                         <img src="assets/lich.png" width="500" height="400">
                     </div>
 
@@ -82,7 +85,12 @@
                 </div>
             </div>
 
-            <div class="card-footer" style="background-color:rgb(26, 53, 10)"></div>
+            <div class="card-footer" style="background-color:rgb(26, 53, 10)">
+                <small class="text-muted" id="log-hero"></small>
+                <p></p>
+                <small class="text-muted" id="log-boss"></small>
+            </div>
+            
 
         </div> <!-- card -->
     </div> <!-- container -->
